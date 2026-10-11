@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wonderful World of Otters</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>🌊 Life of an Otter 🐾</h1>
+            <p>Dive into the playful, fascinating world of nature's cutest aquatic engineers!</p>
+            <a href="#about" class="btn">Explore More</a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        
+        <!-- About Otters Section -->
+        <section id="about" class="card">
+            <h2>Who Are Otters?</h2>
+            <p>Otters are carnivorous mammals in the subfamily Lutrinae. With 13 species across various aquatic environments, they are known for their playful behavior, incredible swimming skills, and thick, waterproof fur coats.</p>
+            <img src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=800&q=80" alt="Cute otter floating" class="responsive-img">
+        </section>
+
+        <!-- Interactive Widget Section: Otter Fact Generator -->
+        <section class="card widget-box">
+            <h2>💡 Interactive Otter Fact Generator</h2>
+            <p>Click the button below to discover a cool random fact about otters!</p>
+            <button id="fact-btn" onclick="generateFact()">Get Random Fact</button>
+            <p id="fact-display" class="fact-text">Press the button to start learning!</p>
+        </section>
+
+        <!-- Features / Grid Section -->
+        <section class="grid">
+            <div class="feature-card">
+                <h3>🦦 Social & Playful</h3>
+                <p>Many otters live in family groups called families or rafts. They love sliding down mud banks and juggling rocks!</p>
+            </div>
+            <div class="feature-card">
+                <h3>🌿 Keystone Species</h3>
+                <p>Sea otters play a vital role in marine ecosystems by controlling sea urchin populations, keeping kelp forests healthy.</p>
+            </div>
+            <div class="feature-card">
+                <h3>💤 Hand-Holding Sleepers</h3>
+                <p>Sea otters hold hands while sleeping so they don't drift apart from each other in the ocean currents.</p>
+            </div>
+        </section>
+
+        <!-- Useful External Links Widget -->
+        <section class="card links-section">
+            <h2>🔗 Learn More & Resources</h2>
+            <p>Want to dive deeper into wildlife conservation? Check out these trusted sources:</p>
+            <ul>
+                <li><a href="https://www.worldwildlife.org" target="_blank">World Wildlife Fund (WWF) - Otter Conservation</a></li>
+                <li><a href="https://www.nationalgeographic.com" target="_blank">National Geographic - Sea Otter Facts</a></li>
+                <li><a href="https://www.iucn.org" target="_blank">IUCN Otter Specialist Group</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Life of an Otter Project. Designed with 💙 for nature lovers.</p>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        const facts = [
+            "Otters have the densest fur of any animal, with up to 1 million hairs per square inch!",
+            "Sea otters don't have blubber, so their thick fur is what keeps them warm in freezing water.",
+            "An otter's lungs can hold up to 2.5 times more air than similar-sized land mammals.",
+            "Some otters use rocks as tools to crack open clams, mussels, and crabs.",
+            "Baby otters cannot swim right away; their mothers have to teach them!"
+        ];
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById("fact-display").innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
